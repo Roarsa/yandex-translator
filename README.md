@@ -13,8 +13,7 @@ require "yandex-translator"
 #Use the function to translate text. 
 #Arguments: text, 
 #language into which the translation will be made, 
-#original language, 
-#format (plain - text without markup (default value); html - text in HTML format). 
+#original language, format (plain - text without markup (default value); html - text in HTML format). 
 #The last two arguments can be omitted.
 @Translator.translate_text('Hello World', 'ru', 'en')
 ```
