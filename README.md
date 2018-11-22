@@ -6,11 +6,11 @@ require "yandex-translator"
 #Use the function "get_languages" to get information about all available languages. 
 #Arguments: the language in which the names of languages will be displayed.
 @Translator.get_languages('en')
-#Use the function to determine the language in which the text is written. 
+#Use the function "define_languages" to determine the language in which the text is written. 
 #Arguments: text, list of languages to be checked first. 
 #The second argument may be omitted.
 @Translator.define_languages('Hello World', 'en, ru, de')
-#Use the function to translate text. 
+#Use the function "translate_text" to translate text. 
 #Arguments: text, 
 #language into which the translation will be made, 
 #original language, format (plain - text without markup (default value); html - text in HTML format). 
