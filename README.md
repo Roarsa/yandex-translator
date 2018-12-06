@@ -2,20 +2,19 @@
 
 ```ruby
 require "yandex-translator"
-@Translator = Yandex::Translator.new(api_key)
-#Use the function "get_languages" to get information about all available languages. 
+#Use the class "GetLanguages" to get information about all available languages. 
 #Arguments: the language in which the names of languages will be displayed.
-@Translator.get_languages('en')
-#Use the function to determine the language in which the text is written. 
+YandexTranslator::GetLanguages.new(API_KEY).main('ru')
+#Use the class "DefineLang" to determine the language in which the text is written. 
 #Arguments: text, list of languages to be checked first. 
 #The second argument may be omitted.
-@Translator.define_languages('Hello World', 'en, ru, de')
-#Use the function to translate text. 
+YandexTranslator::DefineLang.new(API_KEY).main('Hello World!')
+#Use the class "TranslateText" to translate text. 
 #Arguments: text, 
 #language into which the translation will be made, 
 #original language, format (plain - text without markup (default value); html - text in HTML format). 
 #The last two arguments can be omitted.
-@Translator.translate_text('Hello World', 'ru', 'en')
+YandexTranslator::TranslateText.new(API_KEY).main('Hello World!', 'ru', 'en')
 ```
 
 ## Installation
